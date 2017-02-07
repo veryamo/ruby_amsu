@@ -1,0 +1,2 @@
+class Prog < ApplicationRecord
+end

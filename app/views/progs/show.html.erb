@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Название:</strong>
+  <%= @prog.Название %>
+</p>
+
+<p>
+  <strong>Лицензия:</strong>
+  <%= @prog.Лицензия %>
+</p>
+
+<p>
+  <strong>Тип лицензии:</strong>
+  <%= @prog.Тип_лицензии %>
+</p>
+
+<p>
+  <strong>Лиценз №:</strong>
+  <%= @prog.Лиценз_№ %>
+</p>
+
+<%= link_to 'Edit', edit_prog_path(@prog) %> |
+<%= link_to 'Back', progs_path %>

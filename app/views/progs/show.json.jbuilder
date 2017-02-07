@@ -1,0 +1,1 @@
+json.partial! "progs/prog", prog: @prog

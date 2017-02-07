@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Название: MyString
+  Лицензия: false
+  Тип_лицензии: MyString
+  Лиценз_№: MyString
+
+two:
+  Название: MyString
+  Лицензия: false
+  Тип_лицензии: MyString
+  Лиценз_№: MyString

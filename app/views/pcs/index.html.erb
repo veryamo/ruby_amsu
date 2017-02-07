@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Инв №</th>
+      <th>Корпус</th>
+      <th>Кабинет</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcs.each do |pc| %>
+      <tr>
+        <td><%= pc.Инв_№ %></td>
+        <td><%= pc.Корпус %></td>
+        <td><%= pc.Кабинет %></td>
+        <td><%= link_to 'Show', pc %></td>
+        <td><%= link_to 'Edit', edit_pc_path(pc) %></td>
+        <td><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pc', new_pc_path %>

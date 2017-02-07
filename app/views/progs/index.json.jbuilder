@@ -1,0 +1,1 @@
+json.array! @progs, partial: 'progs/prog', as: :prog
