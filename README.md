@@ -1,13 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ничего необычного. Просто веб-приложение, для ведения своего рода отчёта. Должно получиться в итоге...
 
-Things you may want to cover:
 
 * Ruby version
 
+	ruby 2.4.0p0 (2016-12-24 revision 57164) [i686-linux]
+
 * System dependencies
+
+	Rails 5.0.1
 
 * Configuration
 
