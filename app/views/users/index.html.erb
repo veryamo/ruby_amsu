@@ -1,0 +1,21 @@
+<%provide(:title, "Users")%>
+<h1>There are list of registered users</h1>
+<table style="border:1px solid">
+<thead>
+<tr>
+<% (1..User.attribute_names.count-3).each do |i|%>
+<th style="border:1px solid"><%=User.attribute_names[i].to_s.capitalize%></th>
+<%end%>
+<th style="border:1px solid" colspan="4"></th>
+</tr>
+</thead>
+<tbody>
+<%@users.each do |user|%>
+<tr>
+<% (1..User.attribute_names.count-3).each do |i|%>
+<td style="border:1px solid black"><%=user.attributes[User.attribute_names[i]]%></td>
+<%end%>
+<td><%=link_to 'show', user%></td>
+</tr>
+<%end%>
+</table>
