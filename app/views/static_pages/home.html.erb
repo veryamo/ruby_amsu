@@ -5,8 +5,11 @@
   <h2>
     This is the home page. Here you can think about what to do.
   </h2>
-
+<%if logged_in?%>
+<p> Welcome there! You may start working/</p>
+<%else%>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<%end%>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
