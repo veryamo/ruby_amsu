@@ -1,31 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%provide(:title, "Хардвар")%>
+<h1>Список хардвара</h1>
 
-<h1>Pcs</h1>
-
-<table>
+<table style="border:1px solid">
   <thead>
     <tr>
-      <th>Инв №</th>
-      <th>Корпус</th>
-      <th>Кабинет</th>
-      <th colspan="3"></th>
+      <% (0..Pc.attribute_names.count-1).each do |i|%>
+	<th style="border:1px solid"><%=Pc.attribute_names[i].to_s.capitalize%></th>
+      <%end%>
+      <th style="border:1px solid">Show</th>
+      <th style="border:1px solid">Edit</th>
+      <th style="border:1px solid">Destroy</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @pcs.each do |pc| %>
+    <%@pcs.each do |pc| %>
       <tr>
-        <td><%= pc.Инв_№ %></td>
-        <td><%= pc.Корпус %></td>
-        <td><%= pc.Кабинет %></td>
-        <td><%= link_to 'Show', pc %></td>
-        <td><%= link_to 'Edit', edit_pc_path(pc) %></td>
-        <td><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% (0..Pc.attribute_names.count-1).each do |i|%>
+	<td style="border:1px solid"><%=pc.attributes[Pc.attribute_names[i]]%></td>
+	<%end%>
+        <td style="border:1px solid"><%= link_to 'Show', pc %></td>
+        <td style="border:1px solid"><%= link_to 'Edit', edit_pc_path(pc) %></td>
+        <td style="border:1px solid"><%= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New Pc', new_pc_path %>

@@ -1,17 +1,17 @@
-<% provide(:title, "Home") %>
+<% provide(:title, "Главная") %>
 <div class="center jumbotron">
-  <h1>Welcome to the Amursu PCs database</h1>
+  <h1>База данных ПК и ПО АмГУ.</h1>
 
   <h2>
-    This is the home page. Here you can think about what to do.
+    Это стартовая страница, здесь вы можете подумать, что вы хотите сделать.
   </h2>
 <%if logged_in?%>
-<p> Welcome there! You may start working/</p>
+<p>Приветствую вас <%=current_user.name%>. Можете начинать работу!</p>
 <%else%>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Зарегистрироваться", signup_path, class: "btn btn-lg btn-primary" %>
 <%end%>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
+<%= link_to image_tag("rails.png", alt: "Рельсы"),
             'http://rubyonrails.org/' %>
 

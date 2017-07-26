@@ -11,22 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="row">
     <%= f.label :Инв_№ %>
-    <%= f.text_field :Инв_№ %>
-  </div>
+    <%= f.text_field :Инв_№, class: 'form-control' %>
+ 
 
-  <div class="field">
     <%= f.label :Корпус %>
-    <%= f.text_field :Корпус %>
-  </div>
+    <%= f.text_field :Корпус, class: 'form-control' %>
 
-  <div class="field">
     <%= f.label :Кабинет %>
-    <%= f.text_field :Кабинет %>
-  </div>
+    <%= f.text_field :Кабинет, class: 'form-control'%>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit "Создать ПК", class: 'btn btn-primary' %>
+</div>
 <% end %>

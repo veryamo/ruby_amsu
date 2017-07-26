@@ -14,7 +14,7 @@ before_action :correct_user, only: [:edit, :update]
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      remember user
+      remember @user
       redirect_to @user
       flash[:success]="Добро пожаловать!"
     else
