@@ -1,5 +1,5 @@
 <% provide(:title, "Главная") %>
-<div class="center jumbotron">
+<div class="ui center aligned container">
   <h1>База данных ПК и ПО АмГУ.</h1>
 
   <h2>
@@ -8,7 +8,7 @@
 <%if logged_in?%>
 <p>Приветствую вас <%=current_user.name%>. Можете начинать работу!</p>
 <%else%>
-  <%= link_to "Зарегистрироваться", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Зарегистрироваться", signup_path, class: "ui primary button" %>
 <%end%>
 </div>
 

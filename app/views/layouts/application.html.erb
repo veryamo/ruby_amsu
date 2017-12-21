@@ -9,18 +9,19 @@
 <%= render 'layouts/shim' %> 
  </head>
 
-  <body>
-    <%= render 'layouts/header' %>
+  <body class="container", style="margin:0; height:100%">
 <%= render 'layouts/sidenav' %>
-<div class="container">   
+<div id="pusher", class="pusher">
+    <%= render 'layouts/header' %>
+ <div class="appendable divider">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+       <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
 
-<%= yield %>
-<%= debug(params) if Rails.env.development?%>
+ <%= yield%>
+ <!--<%= debug(params) if Rails.env.development?%>-->
 </div>
-
 <%= render 'layouts/footer'%>
+</div>
   </body>
 </html>

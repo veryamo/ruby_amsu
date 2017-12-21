@@ -1,12 +1,8 @@
-<sidenav class="sidenav">
+<sidenav id="leftnav" class="ui left inverted vertical menu thin sidebar">
 <small>
 Workspace
 </small>
-<nav>
-<ul>
-<li><%= link_to "Список пользователей", users_path%></li>
-<li><%= link_to "Список железок", pcs_path%></li>
-<li><%= link_to "Список программ", progs_path%></li>
-</ul>
-</nav>
+<%= link_to "Список пользователей", users_path, class: "item"%>
+<%= link_to "Список железок", pcs_path, class: "item"%>
+<%= link_to "Список программ", progs_path, class: "item"%>
 </sidenav>

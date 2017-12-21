@@ -10,8 +10,26 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require semantic
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require semantic
+$(document).on(' turbolinks:load', (function () {
+	$('.appendable').each(function(){$(this).appendTo('#pusher');});
+
+	$
+        $('#nav-btn').on('click', function () {
+            $('#leftnav').sidebar('toggle');
+        })
+
+        // when goto > 631px hide the mobile sidebar
+        var mq = window.matchMedia('all and (min-width: 631px)');
+        mq.addListener(function (changed) {
+            if (changed.matches) {               // if the width of browser is more then 631px...
+                $('#leftnav').sidebar('hide');    //have to call hide because setting css of display: isn't enough
+            }
+        });
+    }
+))
+;

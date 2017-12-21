@@ -1,12 +1,10 @@
-<footer class="footer">
-  <small>
-    The <a href="http://amursu.ru/">AmurSU</a>
+<footer class="ui inverted horizontal footer segment appendable">
+ <small>
+    The <a href="http://amursu.ru/", style="color:white">AmurSU</a>
     PCs database 
 </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-    </ul>
-  </nav>
+<div class="ui inverted right aligned secondary menu">
+     <%= link_to "About", about_path, class: "right item" %>
+     <%= link_to "Contact", contact_path, class: "right item" %>
+  </div>
 </footer>

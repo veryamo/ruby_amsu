@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.1'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -58,3 +58,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'bootstrap-sass', '3.3.6'
 gem 'rails-assets-semantic', source: 'https://rails-assets.org'
+group :production do
+gem 'pg', '~> 0.18'
+gem 'rails_12factor', '0.0.2'
+end
