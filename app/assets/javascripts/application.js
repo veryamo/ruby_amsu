@@ -28,7 +28,7 @@ $(document).on(' turbolinks:load', (function () {
         mq.addListener(function (changed) {
             if (changed.matches) {               // if the width of browser is more then 631px...
                 $('#leftnav').sidebar('hide');    //have to call hide because setting css of display: isn't enough
-            }
+           }
         });
     }
 ))

@@ -87,3 +87,12 @@ div {
 label {
   display: block;
 }
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sitecontent {
+  flex: 1 0 auto;
+}

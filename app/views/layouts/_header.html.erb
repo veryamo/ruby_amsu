@@ -1,6 +1,6 @@
 <header>
-  <div class="ui pointing menu inverted fluid four item">
-    <button id='nav-btn' class='ui labeled icon button black'><i class="list layout icon"></i>show menu</button>
+  <div class="ui pointing menu inverted fluid four item" style="border-radius:0; width:100%">
+    <button id='nav-btn' class='ui labeled icon button black' style="width:25%"><i class="list layout icon" style="width:100%"></i></button>
     <%= link_to "Home", root_path, class: "item" %>
     <%= link_to "Help", help_path, class: "item" %>
       <% if logged_in? %>

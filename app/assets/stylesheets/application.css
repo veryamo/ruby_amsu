@@ -14,3 +14,44 @@
  *= require_tree .
  *= require_self
  */
+
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 1, 3 */
+}
+
+.sitecontent {
+  min-height: unset;
+  flex: 1; /* 2 */
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+}
+.footer {
+  margin: 0em;
+}
+.pusher {
+  min-height: unset;
+}
+.sitecontent::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
+}
+@media (--break-lg) {
+  .sitecontent {
+    padding-top: var(--space-lg);
+  }
+  .sitecontent::after {
+    margin-top: var(--space-lg);
+  }
+}
+
+.sitecontent--full {
+  padding: 0;
+}
+.sitecontent--full::after {
+  content: none;
+}
