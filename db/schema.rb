@@ -17,17 +17,22 @@ ActiveRecord::Schema.define(version: 20170215112745) do
 
   create_table "pcs", force: :cascade do |t|
     t.string   "Инв_№"
-    t.string   "Корпус"
-    t.string   "Кабинет"
+    t.date   "Год выпуска"
+    t.date   "Дата приобретения"
+    t.string "Кафедра"
+    t.string "Размещение"
+    t.string "Ответственный"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "progs", force: :cascade do |t|
     t.string   "Название"
-    t.boolean  "Лицензия"
-    t.string   "Тип_лицензии"
-    t.string   "Лиценз_№"
+    t.string  "Тип лицензии"
+    t.integer   "Кол-во лицензий"
+    t.integer   "Число инсталляций"
+    t.string   "Где установлена"
+    t.string   "Применение/кафедра"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
