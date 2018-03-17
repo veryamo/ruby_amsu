@@ -117,7 +117,7 @@
 <ul>
     
     <li><a name="public.schema">public</a></li><ul>
-    	<li><a href="#public.table.ar-internal-metadata">ar_internal_metadata</a></li><li><a href="#public.table.pcs">pcs</a></li><li><a href="#public.table.progs">progs</a></li><li><a href="#public.table.rooms">rooms</a></li><li><a href="#public.table.schema-migrations">schema_migrations</a></li><li><a href="#public.table.users">users</a></li>
+    	<li><a href="#public.table.ar-internal-metadata">ar_internal_metadata</a></li><li><a href="#public.table.pcs">pcs</a></li><li><a href="#public.table.pcs-progs">pcs_progs</a></li><li><a href="#public.table.progs">progs</a></li><li><a href="#public.table.rooms">rooms</a></li><li><a href="#public.table.schema-migrations">schema_migrations</a></li><li><a href="#public.table.users">users</a></li>
   	
     </ul>
     
@@ -453,6 +453,87 @@
     <!-- Indexes -->
     
        index_pcs_on_room_id room_id
+    
+
+	<!-- View Definition -->
+	
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a> -
+		<a href="#public.schema">Schema public</a>
+    </p>
+	
+        <hr>
+		<h2>Table:
+			<a name="public.table.pcs-progs">pcs_progs</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>pcs_progs Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>pc_id</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>prog_id</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+		
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+       index_pcs_progs_on_pc_id_and_prog_id pc_id, prog_id
+    
+       index_pcs_progs_on_prog_id_and_pc_id prog_id, pc_id
     
 
 	<!-- View Definition -->

@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Header: /cvsroot/autodoc/autodoc/xml.tmpl,v 1.3 2012/01/05 15:22:28 rbt Exp $ -->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+               "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % myent SYSTEM "entities.ent">
+%myent;
+]>
+<book id="database.amursu-test-development" xreflabel="amursu_test_development database schema"><title>amursu_test_development Model</title>
+
+
+
+
+  <chapter id="public.schema"
+           xreflabel="public">
+    <title>Schema public</title>
+    <para>standard public schema</para>
+
+
+      <section id="public.table.ar-internal-metadata"
+               xreflabel="public.ar_internal_metadata">
+        <title id="public.table.ar-internal-metadata-title">
+         Table:
+         <database class="view">ar_internal_metadata</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">ar_internal_metadata</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">key</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">value</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.pcs"
+               xreflabel="public.pcs">
+        <title id="public.table.pcs-title">
+         Table:
+         <database class="view">pcs</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">pcs</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">invent_num</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">prod_date</database></term>
+              <listitem><para>
+                <database class="datatype">date</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">buying_date</database></term>
+              <listitem><para>
+                <database class="datatype">date</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cathedra</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">placing</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">responsible_person</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">room_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.rooms"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on pcs</title>
+
+          <varlistentry>
+            <term>index_pcs_on_room_id</term>
+            <listitem><para>room_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.pcs-progs"
+               xreflabel="public.pcs_progs">
+        <title id="public.table.pcs-progs-title">
+         Table:
+         <database class="view">pcs_progs</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">pcs_progs</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">pc_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">prog_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on pcs_progs</title>
+
+          <varlistentry>
+            <term>index_pcs_progs_on_pc_id_and_prog_id</term>
+            <listitem><para>pc_id, prog_id</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>index_pcs_progs_on_prog_id_and_pc_id</term>
+            <listitem><para>prog_id, pc_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.progs"
+               xreflabel="public.progs">
+        <title id="public.table.progs-title">
+         Table:
+         <database class="view">progs</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">progs</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">name</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">license_type</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">licenses_count</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">install_count</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cathegory_cathedra</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.rooms"
+               xreflabel="public.rooms">
+        <title id="public.table.rooms-title">
+         Table:
+         <database class="view">rooms</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">rooms</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cabinet_num</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">pc_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">room_type</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on rooms</title>
+
+          <varlistentry>
+            <term>index_rooms_on_pc_id</term>
+            <listitem><para>pc_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing pcs via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.pcs"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.schema-migrations"
+               xreflabel="public.schema_migrations">
+        <title id="public.table.schema-migrations-title">
+         Table:
+         <database class="view">schema_migrations</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">schema_migrations</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">version</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.users"
+               xreflabel="public.users">
+        <title id="public.table.users-title">
+         Table:
+         <database class="view">users</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">users</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">name</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">email</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">password_digest</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">remember_digest</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+
+
+  </chapter>
+
+</book>
+
