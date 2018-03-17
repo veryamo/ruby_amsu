@@ -10,31 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215112745) do
+ActiveRecord::Schema.define(version: 20180317055852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pcs", force: :cascade do |t|
-    t.string   "Инв_№"
-    t.date   "Год выпуска"
-    t.date   "Дата приобретения"
-    t.string "Кафедра"
-    t.string "Размещение"
-    t.string "Ответственный"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "invent_num"
+    t.date     "prod_date"
+    t.date     "buying_date"
+    t.string   "cathedra"
+    t.string   "placing"
+    t.string   "responsible_person"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "room_id"
+    t.index ["room_id"], name: "index_pcs_on_room_id", using: :btree
+  end
+
+  create_table "pcs_progs", id: false, force: :cascade do |t|
+    t.integer "pc_id",   null: false
+    t.integer "prog_id", null: false
+    t.index ["pc_id", "prog_id"], name: "index_pcs_progs_on_pc_id_and_prog_id", using: :btree
+    t.index ["prog_id", "pc_id"], name: "index_pcs_progs_on_prog_id_and_pc_id", using: :btree
   end
 
   create_table "progs", force: :cascade do |t|
-    t.string   "Название"
-    t.string  "Тип лицензии"
-    t.integer   "Кол-во лицензий"
-    t.integer   "Число инсталляций"
-    t.string   "Где установлена"
-    t.string   "Применение/кафедра"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.string   "license_type"
+    t.integer  "licenses_count"
+    t.integer  "install_count"
+    t.string   "cathegory_cathedra"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "cabinet_num"
+    t.integer  "pc_id"
+    t.string   "room_type"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["pc_id"], name: "index_rooms_on_pc_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +64,5 @@ ActiveRecord::Schema.define(version: 20170215112745) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "pcs", "rooms"
 end

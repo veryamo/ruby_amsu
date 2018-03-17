@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :users
   resources :progs
   resources :pcs
+  resources :buildings, param: :cabinet
   root 'static_pages#home'
 end
