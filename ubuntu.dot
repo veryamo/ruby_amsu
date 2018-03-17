@@ -1,0 +1,16 @@
+digraph g {
+graph [
+rankdir = "LR",
+concentrate = true,
+ratio = auto
+];
+node [
+fontsize = "10",
+shape = record
+];
+edge [
+];
+
+
+
+}
