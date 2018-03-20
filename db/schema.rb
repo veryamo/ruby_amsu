@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317055852) do
+ActiveRecord::Schema.define(version: 20180318054525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "departments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "cabinet"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pcs", force: :cascade do |t|
     t.string   "invent_num"
@@ -61,8 +69,11 @@ ActiveRecord::Schema.define(version: 20180317055852) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.integer  "department_id"
+    t.index ["department_id"], name: "index_users_on_department_id", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   add_foreign_key "pcs", "rooms"
+  add_foreign_key "users", "departments"
 end

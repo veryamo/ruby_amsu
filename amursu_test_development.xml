@@ -123,6 +123,160 @@
       </para>
     </section>
 
+      <section id="public.table.departments"
+               xreflabel="public.departments">
+        <title id="public.table.departments-title">
+         Table:
+         <database class="view">departments</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">departments</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">name</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">type</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cabinet</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing users via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.users"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
       <section id="public.table.pcs"
                xreflabel="public.pcs">
         <title id="public.table.pcs-title">
@@ -965,9 +1119,45 @@
             </listitem>
           </varlistentry>
 
+            <varlistentry>
+              <term><database class="field">department_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.departments"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
         </variablelist>
 
 
+
+
+
+        <variablelist>
+          <title>Indexes on users</title>
+
+          <varlistentry>
+            <term>index_users_on_department_id</term>
+            <listitem><para>department_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
 
 
 
