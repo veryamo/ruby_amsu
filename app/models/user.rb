@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :department
   attr_accessor :remember_token
   has_many :individuals
   has_many :roles, :through => :individuals

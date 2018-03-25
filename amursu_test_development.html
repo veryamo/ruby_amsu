@@ -380,7 +380,7 @@
 			<p>Tables referencing this one via Foreign Key Constraints:</p>
 		
 			<ul>
-				<li><a href="#public.table.users">users</a></li>
+				<li><a href="#public.table.individuals">individuals</a></li>
 			</ul>
 		
 		
@@ -534,6 +534,30 @@
 				</td>
 			 </tr>
             
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.departments">departments.id</a>
+                  
+                
+                </td>
+            	<td>department_id</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
         </table>
 
         <!-- Inherits -->
@@ -550,6 +574,8 @@
 		
 
     <!-- Indexes -->
+    
+       index_individuals_on_department_id department_id
     
        index_individuals_on_role_id role_id
     
@@ -1563,30 +1589,6 @@
 				</td>
 			 </tr>
             
-            <tr class="tr1">
-				<td>
-                
-                  
-                  <a href="#public.table.departments">departments.id</a>
-                  
-                
-                </td>
-            	<td>department_id</td>
-            	<td>integer</td>
-                <td><i>
-				
-					
-
-					
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
         </table>
 
         <!-- Inherits -->
@@ -1610,8 +1612,6 @@
 		
 
     <!-- Indexes -->
-    
-       index_users_on_department_id department_id
     
 
 	<!-- View Definition -->

@@ -6,7 +6,7 @@ edge [];
 
 "departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
-"individuals" [shape = record, label = "{<col0> \N| id:  serial\lfio:  character varying\luser_id:  integer\lrole_id:  integer\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
+"individuals" [shape = record, label = "{<col0> \N| id:  serial\lfio:  character varying\luser_id:  integer\lrole_id:  integer\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\ldepartment_id:  integer\l}" ];
 
 "pcs" [shape = record, label = "{<col0> \N| id:  serial\linvent_num:  character varying\lprod_date:  date\lbuying_date:  date\lcathedra:  character varying\lplacing:  character varying\lresponsible_person:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lroom_id:  integer\l}" ];
 
@@ -20,15 +20,15 @@ edge [];
 
 "schema_migrations" [shape = record, label = "{<col0> \N| version:  character varying\l}" ];
 
-"users" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\lemail:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lpassword_digest:  character varying\lremember_digest:  character varying\ldepartment_id:  integer\l}" ];
+"users" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\lemail:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lpassword_digest:  character varying\lremember_digest:  character varying\l}" ];
 
 
 "individuals" -> "users" [label="fk_rails_f0c8599300"];
 "individuals" -> "roles" [label="fk_rails_72e42b990c"];
+"individuals" -> "departments" [label="fk_rails_2922d9a0db"];
 "pcs" -> "rooms" [label="fk_rails_3b8d97d3ad"];
 "pcs_progs" -> "pcs" [label="fk_rails_9fd68a5271"];
 "pcs_progs" -> "progs" [label="fk_rails_d370c03929"];
-"users" -> "departments" [label="fk_rails_f29bf9cdf2"];
 }
 
 

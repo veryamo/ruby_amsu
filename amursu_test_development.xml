@@ -258,12 +258,12 @@
 
         <itemizedlist>
           <title>
-            Tables referencing users via Foreign Key Constraints
+            Tables referencing individuals via Foreign Key Constraints
           </title>
 
           <listitem>
             <para>
-              <xref linkend="public.table.users"/>
+              <xref linkend="public.table.individuals"/>
             </para>
           </listitem>
 
@@ -418,6 +418,30 @@
             </listitem>
           </varlistentry>
 
+            <varlistentry>
+              <term><database class="field">department_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.departments"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
         </variablelist>
 
 
@@ -426,6 +450,13 @@
 
         <variablelist>
           <title>Indexes on individuals</title>
+
+          <varlistentry>
+            <term>index_individuals_on_department_id</term>
+            <listitem><para>department_id</para></listitem>
+          </varlistentry>
+
+
 
           <varlistentry>
             <term>index_individuals_on_role_id</term>
@@ -1457,45 +1488,9 @@
             </listitem>
           </varlistentry>
 
-            <varlistentry>
-              <term><database class="field">department_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
-
-
-
-
-
-
-
-
-
-                <database class="constraint">REFERENCES <xref linkend="public.table.departments"/></database>
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
         </variablelist>
 
 
-
-
-
-        <variablelist>
-          <title>Indexes on users</title>
-
-          <varlistentry>
-            <term>index_users_on_department_id</term>
-            <listitem><para>department_id</para></listitem>
-          </varlistentry>
-
-        </variablelist>
 
 
 
