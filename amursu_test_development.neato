@@ -6,11 +6,15 @@ edge [];
 
 "departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
+"individuals" [shape = record, label = "{<col0> \N| id:  serial\lfio:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\luser_id:  integer\lrole_id:  integer\l}" ];
+
 "pcs" [shape = record, label = "{<col0> \N| id:  serial\linvent_num:  character varying\lprod_date:  date\lbuying_date:  date\lcathedra:  character varying\lplacing:  character varying\lresponsible_person:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lroom_id:  integer\l}" ];
 
 "pcs_progs" [shape = record, label = "{<col0> \N| pc_id:  integer\lprog_id:  integer\l}" ];
 
 "progs" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\llicense_type:  character varying\llicenses_count:  integer\linstall_count:  integer\lcathegory_cathedra:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
+
+"roles" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
 "rooms" [shape = record, label = "{<col0> \N| id:  serial\lcabinet_num:  character varying\lpc_id:  integer\lroom_type:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318054525) do
+ActiveRecord::Schema.define(version: 20180324234446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20180318054525) do
     t.string   "cabinet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "individuals", force: :cascade do |t|
+    t.string   "fio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.index ["user_id", "role_id"], name: "index_individuals_on_user_id_and_role_id", using: :btree
   end
 
   create_table "pcs", force: :cascade do |t|
@@ -51,6 +60,12 @@ ActiveRecord::Schema.define(version: 20180318054525) do
     t.string   "cathegory_cathedra"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rooms", force: :cascade do |t|

@@ -277,6 +277,157 @@
       </para>
     </section>
 
+      <section id="public.table.individuals"
+               xreflabel="public.individuals">
+        <title id="public.table.individuals-title">
+         Table:
+         <database class="view">individuals</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">individuals</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">fio</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">user_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">role_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on individuals</title>
+
+          <varlistentry>
+            <term>index_individuals_on_user_id_and_role_id</term>
+            <listitem><para>user_id, role_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
       <section id="public.table.pcs"
                xreflabel="public.pcs">
         <title id="public.table.pcs-title">
@@ -693,6 +844,113 @@
 
             <varlistentry>
               <term><database class="field">cathegory_cathedra</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">created_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">updated_at</database></term>
+              <listitem><para>
+                <database class="datatype">timestamp without time zone</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.roles"
+               xreflabel="public.roles">
+        <title id="public.table.roles-title">
+         Table:
+         <database class="view">roles</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">roles</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">id</database></term>
+              <listitem><para>
+                <database class="datatype">serial</database>
+
+
+                <database class="constraint">PRIMARY KEY</database>
+
+
+
+
+
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">name</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 

@@ -1,10 +1,29 @@
 <footer class="ui inverted horizontal footer segment appendable" style="border-radius:0">
- <small>
+<table>
+<td>
+        <div class="ui inverted right aligned secondary menu">
+    <table>
+        <tr>
+            <td>
+                <%= link_to "About", about_path, class: "right item" %>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <%= link_to "Contact", contact_path, class: "right item" %>
+            </td>
+        </tr>
+    </table>
+  </div>
+  </td>
+  </tr>
+ <tr>
+     <td>
+     <small>
     The <a href="http://amursu.ru/", style="color:white">AmurSU</a>
     PCs database 
 </small>
-<div class="ui inverted right aligned secondary menu">
-     <%= link_to "About", about_path, class: "right item" %>
-     <%= link_to "Contact", contact_path, class: "right item" %>
-  </div>
+</td>
+</tr>
+</table>
 </footer>
