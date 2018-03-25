@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(version: 20180324234446) do
   end
 
   create_table "pcs_progs", id: false, force: :cascade do |t|
-    t.integer "pc_id",   null: false
-    t.integer "prog_id", null: false
-    t.index ["pc_id", "prog_id"], name: "index_pcs_progs_on_pc_id_and_prog_id", using: :btree
-    t.index ["prog_id", "pc_id"], name: "index_pcs_progs_on_prog_id_and_pc_id", using: :btree
+    t.integer "pc_id"
+    t.integer "prog_id"
+    t.index ["pc_id"], name: "index_pcs_progs_on_pc_id", using: :btree
+    t.index ["prog_id"], name: "index_pcs_progs_on_prog_id", using: :btree
   end
 
   create_table "progs", force: :cascade do |t|
@@ -90,5 +90,7 @@ ActiveRecord::Schema.define(version: 20180324234446) do
   end
 
   add_foreign_key "pcs", "rooms"
+  add_foreign_key "pcs_progs", "pcs"
+  add_foreign_key "pcs_progs", "progs"
   add_foreign_key "users", "departments"
 end

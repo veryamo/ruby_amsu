@@ -24,6 +24,8 @@ edge [];
 
 
 "pcs" -> "rooms" [label="fk_rails_3b8d97d3ad"];
+"pcs_progs" -> "pcs" [label="fk_rails_9fd68a5271"];
+"pcs_progs" -> "progs" [label="fk_rails_d370c03929"];
 "users" -> "departments" [label="fk_rails_f29bf9cdf2"];
 }
 

@@ -754,6 +754,13 @@
 
         <!-- Foreign Key Discovery -->
 		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.pcs-progs">pcs_progs</a></li>
+			</ul>
+		
+		
 
     <!-- Indexes -->
     
@@ -790,13 +797,21 @@
             <tr class="tr0">
 				<td>
                 
+                  
+                  <a href="#public.table.pcs">pcs.id</a>
+                  
+                
                 </td>
             	<td>pc_id</td>
             	<td>integer</td>
                 <td><i>
 				
+					
 
-				NOT NULL
+					
+				
+
+				
 				
 				</i>
 				
@@ -806,13 +821,21 @@
             <tr class="tr1">
 				<td>
                 
+                  
+                  <a href="#public.table.progs">progs.id</a>
+                  
+                
                 </td>
             	<td>prog_id</td>
             	<td>integer</td>
                 <td><i>
 				
+					
 
-				NOT NULL
+					
+				
+
+				
 				
 				</i>
 				
@@ -836,9 +859,9 @@
 
     <!-- Indexes -->
     
-       index_pcs_progs_on_pc_id_and_prog_id pc_id, prog_id
+       index_pcs_progs_on_pc_id pc_id
     
-       index_pcs_progs_on_prog_id_and_pc_id prog_id, pc_id
+       index_pcs_progs_on_prog_id prog_id
     
 
 	<!-- View Definition -->
@@ -1016,6 +1039,13 @@
 		
 
         <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.pcs-progs">pcs_progs</a></li>
+			</ul>
+		
 		
 
     <!-- Indexes -->

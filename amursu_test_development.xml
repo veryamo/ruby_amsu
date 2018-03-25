@@ -645,6 +645,21 @@
 
 
 
+        <itemizedlist>
+          <title>
+            Tables referencing pcs_progs via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.pcs-progs"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
 
 
 
@@ -675,10 +690,16 @@
 
 
 
-                <database class="constraint">NOT NULL</database>
 
 
 
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.pcs"/></database>
 
 
               </para>
@@ -693,10 +714,16 @@
 
 
 
-                <database class="constraint">NOT NULL</database>
 
 
 
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.progs"/></database>
 
 
               </para>
@@ -714,15 +741,15 @@
           <title>Indexes on pcs_progs</title>
 
           <varlistentry>
-            <term>index_pcs_progs_on_pc_id_and_prog_id</term>
-            <listitem><para>pc_id, prog_id</para></listitem>
+            <term>index_pcs_progs_on_pc_id</term>
+            <listitem><para>pc_id</para></listitem>
           </varlistentry>
 
 
 
           <varlistentry>
-            <term>index_pcs_progs_on_prog_id_and_pc_id</term>
-            <listitem><para>prog_id, pc_id</para></listitem>
+            <term>index_pcs_progs_on_prog_id</term>
+            <listitem><para>prog_id</para></listitem>
           </varlistentry>
 
         </variablelist>
@@ -899,6 +926,21 @@
 
 
 
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing pcs_progs via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.pcs-progs"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
 
 
 
