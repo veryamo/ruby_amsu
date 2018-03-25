@@ -335,6 +335,54 @@
           </varlistentry>
 
             <varlistentry>
+              <term><database class="field">user_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.users"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">role_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.roles"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
               <term><database class="field">created_at</database></term>
               <listitem><para>
                 <database class="datatype">timestamp without time zone</database>
@@ -370,38 +418,6 @@
             </listitem>
           </varlistentry>
 
-            <varlistentry>
-              <term><database class="field">user_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
-
-
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
-            <varlistentry>
-              <term><database class="field">role_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
-
-
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
         </variablelist>
 
 
@@ -412,8 +428,15 @@
           <title>Indexes on individuals</title>
 
           <varlistentry>
-            <term>index_individuals_on_user_id_and_role_id</term>
-            <listitem><para>user_id, role_id</para></listitem>
+            <term>index_individuals_on_role_id</term>
+            <listitem><para>role_id</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>index_individuals_on_user_id</term>
+            <listitem><para>user_id</para></listitem>
           </varlistentry>
 
         </variablelist>
@@ -1051,6 +1074,21 @@
 
 
 
+        <itemizedlist>
+          <title>
+            Tables referencing individuals via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.individuals"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
+
+
+
 
 
 
@@ -1460,6 +1498,21 @@
         </variablelist>
 
 
+
+
+
+        <itemizedlist>
+          <title>
+            Tables referencing individuals via Foreign Key Constraints
+          </title>
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.individuals"/>
+            </para>
+          </listitem>
+
+        </itemizedlist>
 
 
 

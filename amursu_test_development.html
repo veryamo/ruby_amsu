@@ -457,6 +457,54 @@
             <tr class="tr0">
 				<td>
                 
+                  
+                  <a href="#public.table.users">users.id</a>
+                  
+                
+                </td>
+            	<td>user_id</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.roles">roles.id</a>
+                  
+                
+                </td>
+            	<td>role_id</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
                 </td>
             	<td>created_at</td>
             	<td>timestamp without time zone</td>
@@ -486,38 +534,6 @@
 				</td>
 			 </tr>
             
-            <tr class="tr0">
-				<td>
-                
-                </td>
-            	<td>user_id</td>
-            	<td>integer</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr1">
-				<td>
-                
-                </td>
-            	<td>role_id</td>
-            	<td>integer</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
         </table>
 
         <!-- Inherits -->
@@ -535,7 +551,9 @@
 
     <!-- Indexes -->
     
-       index_individuals_on_user_id_and_role_id user_id, role_id
+       index_individuals_on_role_id role_id
+    
+       index_individuals_on_user_id user_id
     
 
 	<!-- View Definition -->
@@ -1163,6 +1181,13 @@
 
         <!-- Foreign Key Discovery -->
 		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.individuals">individuals</a></li>
+			</ul>
+		
+		
 
     <!-- Indexes -->
     
@@ -1575,6 +1600,13 @@
 		
 
         <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.individuals">individuals</a></li>
+			</ul>
+		
 		
 
     <!-- Indexes -->
