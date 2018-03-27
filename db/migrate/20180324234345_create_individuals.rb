@@ -3,7 +3,6 @@ class CreateIndividuals < ActiveRecord::Migration[5.0]
     create_table :individuals do |t|
       t.string :fio
       t.references :user, foreign_key: true
-      t.references :role, foreign_key: true
       t.timestamps
     end
   end

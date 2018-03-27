@@ -359,30 +359,6 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">role_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
-
-
-
-
-
-
-
-
-
-                <database class="constraint">REFERENCES <xref linkend="public.table.roles"/></database>
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
-            <varlistentry>
               <term><database class="field">created_at</database></term>
               <listitem><para>
                 <database class="datatype">timestamp without time zone</database>
@@ -454,13 +430,6 @@
           <varlistentry>
             <term>index_individuals_on_department_id</term>
             <listitem><para>department_id</para></listitem>
-          </varlistentry>
-
-
-
-          <varlistentry>
-            <term>index_individuals_on_role_id</term>
-            <listitem><para>role_id</para></listitem>
           </varlistentry>
 
 
@@ -1107,16 +1076,150 @@
 
         <itemizedlist>
           <title>
-            Tables referencing individuals via Foreign Key Constraints
+            Tables referencing roles_users via Foreign Key Constraints
           </title>
 
           <listitem>
             <para>
-              <xref linkend="public.table.individuals"/>
+              <xref linkend="public.table.roles-users"/>
             </para>
           </listitem>
 
         </itemizedlist>
+
+
+
+
+
+
+      </para>
+    </section>
+
+      <section id="public.table.roles-users"
+               xreflabel="public.roles_users">
+        <title id="public.table.roles-users-title">
+         Table:
+         <database class="view">roles_users</database>
+         
+        </title>
+ 
+
+
+        <para>
+          <variablelist>
+            <title>
+              Structure of <database class="table">roles_users</database>
+            </title>
+
+
+            <varlistentry>
+              <term><database class="field">role_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">user_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+                <database class="constraint">NOT NULL</database>
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">roles_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.roles"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">users_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+
+
+
+
+
+                <database class="constraint">REFERENCES <xref linkend="public.table.users"/></database>
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
+
+
+
+        <variablelist>
+          <title>Indexes on roles_users</title>
+
+          <varlistentry>
+            <term>index_roles_users_on_roles_id</term>
+            <listitem><para>roles_id</para></listitem>
+          </varlistentry>
+
+
+
+          <varlistentry>
+            <term>index_roles_users_on_users_id</term>
+            <listitem><para>users_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
+
+
 
 
 
@@ -1504,6 +1607,14 @@
           <listitem>
             <para>
               <xref linkend="public.table.individuals"/>
+            </para>
+          </listitem>
+
+
+
+          <listitem>
+            <para>
+              <xref linkend="public.table.roles-users"/>
             </para>
           </listitem>
 

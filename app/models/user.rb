@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   has_many :individuals
-  has_many :roles, :through => :individuals
+  has_and_belongs_to_many :roles
   before_save {self.email = email.downcase}  
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, presence: true, length: {maximum: 50}

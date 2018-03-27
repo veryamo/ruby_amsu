@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180325084523) do
+ActiveRecord::Schema.define(version: 20180327141603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,10 @@ ActiveRecord::Schema.define(version: 20180325084523) do
   create_table "individuals", force: :cascade do |t|
     t.string   "fio"
     t.integer  "user_id"
-    t.integer  "role_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "department_id"
     t.index ["department_id"], name: "index_individuals_on_department_id", using: :btree
-    t.index ["role_id"], name: "index_individuals_on_role_id", using: :btree
     t.index ["user_id"], name: "index_individuals_on_user_id", using: :btree
   end
 
@@ -71,6 +69,15 @@ ActiveRecord::Schema.define(version: 20180325084523) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "roles_users", id: false, force: :cascade do |t|
+    t.integer "role_id",  null: false
+    t.integer "user_id",  null: false
+    t.integer "roles_id"
+    t.integer "users_id"
+    t.index ["roles_id"], name: "index_roles_users_on_roles_id", using: :btree
+    t.index ["users_id"], name: "index_roles_users_on_users_id", using: :btree
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string   "cabinet_num"
     t.integer  "pc_id"
@@ -91,9 +98,10 @@ ActiveRecord::Schema.define(version: 20180325084523) do
   end
 
   add_foreign_key "individuals", "departments"
-  add_foreign_key "individuals", "roles"
   add_foreign_key "individuals", "users"
   add_foreign_key "pcs", "rooms"
   add_foreign_key "pcs_progs", "pcs"
   add_foreign_key "pcs_progs", "progs"
+  add_foreign_key "roles_users", "roles", column: "roles_id"
+  add_foreign_key "roles_users", "users", column: "users_id"
 end
