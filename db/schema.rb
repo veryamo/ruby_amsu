@@ -70,12 +70,10 @@ ActiveRecord::Schema.define(version: 20180327141603) do
   end
 
   create_table "roles_users", id: false, force: :cascade do |t|
-    t.integer "role_id",  null: false
-    t.integer "user_id",  null: false
-    t.integer "roles_id"
-    t.integer "users_id"
-    t.index ["roles_id"], name: "index_roles_users_on_roles_id", using: :btree
-    t.index ["users_id"], name: "index_roles_users_on_users_id", using: :btree
+    t.integer "role_id"
+    t.integer "user_id"
+    t.index ["role_id"], name: "index_roles_users_on_role_id", using: :btree
+    t.index ["user_id"], name: "index_roles_users_on_user_id", using: :btree
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -102,6 +100,6 @@ ActiveRecord::Schema.define(version: 20180327141603) do
   add_foreign_key "pcs", "rooms"
   add_foreign_key "pcs_progs", "pcs"
   add_foreign_key "pcs_progs", "progs"
-  add_foreign_key "roles_users", "roles", column: "roles_id"
-  add_foreign_key "roles_users", "users", column: "users_id"
+  add_foreign_key "roles_users", "roles"
+  add_foreign_key "roles_users", "users"
 end

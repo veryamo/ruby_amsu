@@ -1119,42 +1119,6 @@
 
 
 
-                <database class="constraint">NOT NULL</database>
-
-
-
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
-            <varlistentry>
-              <term><database class="field">user_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
-                <database class="constraint">NOT NULL</database>
-
-
-
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
-            <varlistentry>
-              <term><database class="field">roles_id</database></term>
-              <listitem><para>
-                <database class="datatype">integer</database>
-
-
-
 
 
 
@@ -1173,7 +1137,7 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">users_id</database></term>
+              <term><database class="field">user_id</database></term>
               <listitem><para>
                 <database class="datatype">integer</database>
 
@@ -1206,15 +1170,15 @@
           <title>Indexes on roles_users</title>
 
           <varlistentry>
-            <term>index_roles_users_on_roles_id</term>
-            <listitem><para>roles_id</para></listitem>
+            <term>index_roles_users_on_role_id</term>
+            <listitem><para>role_id</para></listitem>
           </varlistentry>
 
 
 
           <varlistentry>
-            <term>index_roles_users_on_users_id</term>
-            <listitem><para>users_id</para></listitem>
+            <term>index_roles_users_on_user_id</term>
+            <listitem><para>user_id</para></listitem>
           </varlistentry>
 
         </variablelist>

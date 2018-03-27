@@ -1789,52 +1789,6 @@
           </dia:attribute>
         </dia:composite>
 
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#  roles_id#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>#integer#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-
-            <dia:string/>
-
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="3"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#  users_id#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>#integer#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-
-            <dia:string/>
-
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="3"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-
       </dia:attribute>
 
       <dia:attribute name="visible_operations">
@@ -2699,7 +2653,7 @@
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#fk_rails_355ab02781#</dia:string>
+        <dia:string>#fk_rails_9dada905f6#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>##</dia:string>
@@ -2708,7 +2662,7 @@
         <dia:boolean val="true"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O8" connection="12"/>
+        <dia:connection handle="0" to="O8" connection="8"/>
         <dia:connection handle="1" to="O7" connection="9"/>
       </dia:connections>
     </dia:object>
@@ -2737,7 +2691,7 @@
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#fk_rails_01bf6e6ff2#</dia:string>
+        <dia:string>#fk_rails_e2a7142459#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>##</dia:string>
@@ -2746,7 +2700,7 @@
         <dia:boolean val="true"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O8" connection="14"/>
+        <dia:connection handle="0" to="O8" connection="10"/>
         <dia:connection handle="1" to="O11" connection="9"/>
       </dia:connections>
     </dia:object>

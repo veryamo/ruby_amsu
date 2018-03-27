@@ -16,7 +16,7 @@ edge [];
 
 "roles" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
-"roles_users" [shape = record, label = "{<col0> \N| role_id:  integer\luser_id:  integer\lroles_id:  integer\lusers_id:  integer\l}" ];
+"roles_users" [shape = record, label = "{<col0> \N| role_id:  integer\luser_id:  integer\l}" ];
 
 "rooms" [shape = record, label = "{<col0> \N| id:  serial\lcabinet_num:  character varying\lpc_id:  integer\lroom_type:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
@@ -30,8 +30,8 @@ edge [];
 "pcs" -> "rooms" [label="fk_rails_3b8d97d3ad"];
 "pcs_progs" -> "pcs" [label="fk_rails_9fd68a5271"];
 "pcs_progs" -> "progs" [label="fk_rails_d370c03929"];
-"roles_users" -> "roles" [label="fk_rails_355ab02781"];
-"roles_users" -> "users" [label="fk_rails_01bf6e6ff2"];
+"roles_users" -> "roles" [label="fk_rails_9dada905f6"];
+"roles_users" -> "users" [label="fk_rails_e2a7142459"];
 }
 
 
