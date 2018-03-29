@@ -4,7 +4,7 @@ edge [];
 
 "ar_internal_metadata" [shape = record, label = "{<col0> \N| key:  character varying\lvalue:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
-"departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
+"departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lparental_dept_id:  integer\l}" ];
 
 "individuals" [shape = record, label = "{<col0> \N| id:  serial\lfio:  character varying\luser_id:  integer\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\ldepartment_id:  integer\l}" ];
 

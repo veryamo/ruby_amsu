@@ -429,6 +429,29 @@
           </dia:attribute>
         </dia:composite>
 
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  parental_dept_id#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#integer#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
       </dia:attribute>
 
       <dia:attribute name="visible_operations">

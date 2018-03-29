@@ -248,9 +248,37 @@
             </listitem>
           </varlistentry>
 
+            <varlistentry>
+              <term><database class="field">parental_dept_id</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
         </variablelist>
 
 
+
+
+
+        <variablelist>
+          <title>Indexes on departments</title>
+
+          <varlistentry>
+            <term>index_departments_on_parental_dept_id</term>
+            <listitem><para>parental_dept_id</para></listitem>
+          </varlistentry>
+
+        </variablelist>
 
 
 
