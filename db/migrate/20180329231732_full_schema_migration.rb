@@ -1,17 +1,21 @@
 class FullSchemaMigration < ActiveRecord::Migration[5.0]
   def change
     create_table :pcs do |t|
-      t.string :Инв_№
-      t.string :Корпус
-      t.string :Кабинет
+      t.string :invent_num
+      t.date :prod_date
+      t.date :buying_date
+      t.string :cathedra
+      t.string :placing
+      t.string :responsible_person
 
       t.timestamps
     end
     create_table :progs do |t|
-      t.string :Название
-      t.boolean :Лицензия
-      t.string :Тип_лицензии
-      t.string :Лиценз_№
+      t.string :name
+      t.string :license_type
+      t.integer :licenses_count
+      t.integer :install_count
+      t.string :cathegory_cathedra
 
       t.timestamps
     end
