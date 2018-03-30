@@ -112,7 +112,7 @@
   <body>
 
     <!-- Primary Index -->
-	<p><br><br>Dumped on 2018-03-29</p>
+	<p><br><br>Dumped on 2018-03-30</p>
 <h1><a name="index">Index of database - amursu_test_development</a></h1>
 <ul>
     
@@ -367,6 +367,22 @@
 				<td>
                 
                 </td>
+            	<td>parental_dept_type</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
             	<td>parental_dept_id</td>
             	<td>integer</td>
                 <td><i>
@@ -403,7 +419,7 @@
 
     <!-- Indexes -->
     
-       index_departments_on_parental_dept_id parental_dept_id
+       index_departments_on_parental_dept_type_and_parental_dept_id parental_dept_type, parental_dept_id
     
 
 	<!-- View Definition -->
@@ -628,7 +644,7 @@
 				<td>
                 
                 </td>
-            	<td>invent_num</td>
+            	<td>Инв_№</td>
             	<td>character varying</td>
                 <td><i>
 				
@@ -644,39 +660,7 @@
 				<td>
                 
                 </td>
-            	<td>prod_date</td>
-            	<td>date</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr1">
-				<td>
-                
-                </td>
-            	<td>buying_date</td>
-            	<td>date</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr0">
-				<td>
-                
-                </td>
-            	<td>cathedra</td>
+            	<td>Корпус</td>
             	<td>character varying</td>
                 <td><i>
 				
@@ -692,7 +676,7 @@
 				<td>
                 
                 </td>
-            	<td>placing</td>
+            	<td>Кабинет</td>
             	<td>character varying</td>
                 <td><i>
 				
@@ -705,22 +689,6 @@
 			 </tr>
             
             <tr class="tr0">
-				<td>
-                
-                </td>
-            	<td>responsible_person</td>
-            	<td>character varying</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr1">
 				<td>
                 
                 </td>
@@ -736,7 +704,7 @@
 				</td>
 			 </tr>
             
-            <tr class="tr0">
+            <tr class="tr1">
 				<td>
                 
                 </td>
@@ -752,7 +720,7 @@
 				</td>
 			 </tr>
             
-            <tr class="tr1">
+            <tr class="tr0">
 				<td>
                 
                   
@@ -954,7 +922,7 @@
 				<td>
                 
                 </td>
-            	<td>name</td>
+            	<td>Название</td>
             	<td>character varying</td>
                 <td><i>
 				
@@ -970,8 +938,8 @@
 				<td>
                 
                 </td>
-            	<td>license_type</td>
-            	<td>character varying</td>
+            	<td>Лицензия</td>
+            	<td>boolean</td>
                 <td><i>
 				
 
@@ -986,39 +954,7 @@
 				<td>
                 
                 </td>
-            	<td>licenses_count</td>
-            	<td>integer</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr0">
-				<td>
-                
-                </td>
-            	<td>install_count</td>
-            	<td>integer</td>
-                <td><i>
-				
-
-				
-				
-				</i>
-				
-				</td>
-			 </tr>
-            
-            <tr class="tr1">
-				<td>
-                
-                </td>
-            	<td>cathegory_cathedra</td>
+            	<td>Тип_лицензии</td>
             	<td>character varying</td>
                 <td><i>
 				
@@ -1031,6 +967,22 @@
 			 </tr>
             
             <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>Лиценз_№</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
 				<td>
                 
                 </td>
@@ -1046,7 +998,7 @@
 				</td>
 			 </tr>
             
-            <tr class="tr1">
+            <tr class="tr0">
 				<td>
                 
                 </td>

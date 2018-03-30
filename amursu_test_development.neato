@@ -4,15 +4,15 @@ edge [];
 
 "ar_internal_metadata" [shape = record, label = "{<col0> \N| key:  character varying\lvalue:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
-"departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lparental_dept_id:  integer\l}" ];
+"departments" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\ltype:  character varying\lcabinet:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lparental_dept_type:  character varying\lparental_dept_id:  integer\l}" ];
 
 "individuals" [shape = record, label = "{<col0> \N| id:  serial\lfio:  character varying\luser_id:  integer\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\ldepartment_id:  integer\l}" ];
 
-"pcs" [shape = record, label = "{<col0> \N| id:  serial\linvent_num:  character varying\lprod_date:  date\lbuying_date:  date\lcathedra:  character varying\lplacing:  character varying\lresponsible_person:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lroom_id:  integer\l}" ];
+"pcs" [shape = record, label = "{<col0> \N| id:  serial\lИнв_№:  character varying\lКорпус:  character varying\lКабинет:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\lroom_id:  integer\l}" ];
 
 "pcs_progs" [shape = record, label = "{<col0> \N| pc_id:  integer\lprog_id:  integer\l}" ];
 
-"progs" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\llicense_type:  character varying\llicenses_count:  integer\linstall_count:  integer\lcathegory_cathedra:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
+"progs" [shape = record, label = "{<col0> \N| id:  serial\lНазвание:  character varying\lЛицензия:  boolean\lТип_лицензии:  character varying\lЛиценз_№:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 
 "roles" [shape = record, label = "{<col0> \N| id:  serial\lname:  character varying\lcreated_at:  timestamp without time zone\lupdated_at:  timestamp without time zone\l}" ];
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328111807) do
+ActiveRecord::Schema.define(version: 20180329231732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,14 +37,11 @@ ActiveRecord::Schema.define(version: 20180328111807) do
   end
 
   create_table "pcs", force: :cascade do |t|
-    t.string   "invent_num"
-    t.date     "prod_date"
-    t.date     "buying_date"
-    t.string   "cathedra"
-    t.string   "placing"
-    t.string   "responsible_person"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "Инв_№"
+    t.string   "Корпус"
+    t.string   "Кабинет"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "room_id"
     t.index ["room_id"], name: "index_pcs_on_room_id", using: :btree
   end
@@ -57,13 +54,12 @@ ActiveRecord::Schema.define(version: 20180328111807) do
   end
 
   create_table "progs", force: :cascade do |t|
-    t.string   "name"
-    t.string   "license_type"
-    t.integer  "licenses_count"
-    t.integer  "install_count"
-    t.string   "cathegory_cathedra"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "Название"
+    t.boolean  "Лицензия"
+    t.string   "Тип_лицензии"
+    t.string   "Лиценз_№"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "roles", force: :cascade do |t|
