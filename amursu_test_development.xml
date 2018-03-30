@@ -537,7 +537,7 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Инв_№</database></term>
+              <term><database class="field">invent_num</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 
@@ -553,7 +553,39 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Корпус</database></term>
+              <term><database class="field">prod_date</database></term>
+              <listitem><para>
+                <database class="datatype">date</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">buying_date</database></term>
+              <listitem><para>
+                <database class="datatype">date</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cathedra</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 
@@ -569,7 +601,23 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Кабинет</database></term>
+              <term><database class="field">placing</database></term>
+              <listitem><para>
+                <database class="datatype">character varying</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">responsible_person</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 
@@ -825,7 +873,7 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Название</database></term>
+              <term><database class="field">name</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 
@@ -841,23 +889,7 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Лицензия</database></term>
-              <listitem><para>
-                <database class="datatype">boolean</database>
-
-
-
-
-
-
-
-              </para>
-
-            </listitem>
-          </varlistentry>
-
-            <varlistentry>
-              <term><database class="field">Тип_лицензии</database></term>
+              <term><database class="field">license_type</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 
@@ -873,7 +905,39 @@
           </varlistentry>
 
             <varlistentry>
-              <term><database class="field">Лиценз_№</database></term>
+              <term><database class="field">licenses_count</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">install_count</database></term>
+              <listitem><para>
+                <database class="datatype">integer</database>
+
+
+
+
+
+
+
+              </para>
+
+            </listitem>
+          </varlistentry>
+
+            <varlistentry>
+              <term><database class="field">cathegory_cathedra</database></term>
               <listitem><para>
                 <database class="datatype">character varying</database>
 

@@ -846,7 +846,7 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Инв_№#</dia:string>
+            <dia:string>#  invent_num#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -869,7 +869,53 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Корпус#</dia:string>
+            <dia:string>#  prod_date#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#date#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  buying_date#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#date#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  cathedra#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -892,7 +938,30 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Кабинет#</dia:string>
+            <dia:string>#  placing#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#character varying#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  responsible_person#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -1261,7 +1330,7 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Название#</dia:string>
+            <dia:string>#  name#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -1284,30 +1353,7 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Лицензия#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>#boolean#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-
-            <dia:string/>
-
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="3"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#  Тип_лицензии#</dia:string>
+            <dia:string>#  license_type#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -1330,7 +1376,53 @@
 
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#  Лиценз_№#</dia:string>
+            <dia:string>#  licenses_count#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#integer#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  install_count#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#integer#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+
+            <dia:string/>
+
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#  cathegory_cathedra#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#character varying#</dia:string>
@@ -2502,7 +2594,7 @@
         <dia:boolean val="true"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O4" connection="20"/>
+        <dia:connection handle="0" to="O4" connection="26"/>
         <dia:connection handle="1" to="O9" connection="9"/>
       </dia:connections>
     </dia:object>
