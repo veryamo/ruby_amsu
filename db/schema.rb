@@ -10,20 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329231732) do
+ActiveRecord::Schema.define(version: 20180401093701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "decrees", force: :cascade do |t|
+    t.integer  "initiator_id"
+    t.datetime "signing_date"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["initiator_id"], name: "index_decrees_on_initiator_id", using: :btree
+  end
 
   create_table "departments", force: :cascade do |t|
     t.string   "name"
     t.string   "type"
     t.string   "cabinet"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "parental_dept_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "parental_dept_id"
-    t.index ["parental_dept_type", "parental_dept_id"], name: "index_departments_on_parental_dept_type_and_parental_dept_id", using: :btree
+    t.index ["parental_dept_id"], name: "index_departments_on_parental_dept_id", using: :btree
   end
 
   create_table "individuals", force: :cascade do |t|
@@ -79,6 +86,11 @@ ActiveRecord::Schema.define(version: 20180329231732) do
     t.index ["user_id"], name: "index_roles_users_on_user_id", using: :btree
   end
 
+  create_table "room_assigns", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string   "cabinet_num"
     t.integer  "pc_id"
@@ -98,6 +110,8 @@ ActiveRecord::Schema.define(version: 20180329231732) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "decrees", "individuals", column: "initiator_id"
+  add_foreign_key "departments", "departments", column: "parental_dept_id"
   add_foreign_key "individuals", "departments"
   add_foreign_key "individuals", "users"
   add_foreign_key "pcs", "rooms"
