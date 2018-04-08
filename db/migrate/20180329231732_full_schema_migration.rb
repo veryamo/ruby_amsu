@@ -67,7 +67,7 @@ class FullSchemaMigration < ActiveRecord::Migration[5.0]
       t.references :user, foreign_key: true
     end
     change_table :departments do |t|
-      t.references :parental_dept, index: true, polymorphic: true
+      t.references :parental_dept, polymorphic: true
     end
   end
 end

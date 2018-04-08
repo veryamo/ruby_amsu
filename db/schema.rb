@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20180401083825) do
 
   create_table "decrees", force: :cascade do |t|
     t.integer  "initiator_id"
+    t.string   "executors"
+    t.string   "objects"
     t.datetime "signing_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -27,10 +29,11 @@ ActiveRecord::Schema.define(version: 20180401083825) do
     t.string   "name"
     t.string   "type"
     t.string   "cabinet"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "parental_dept_type"
     t.integer  "parental_dept_id"
-    t.index ["parental_dept_id"], name: "index_departments_on_parental_dept_id", using: :btree
+    t.index ["parental_dept_type", "parental_dept_id"], name: "index_departments_on_parental_dept_type_and_parental_dept_id", using: :btree
   end
 
   create_table "individuals", force: :cascade do |t|
@@ -111,7 +114,6 @@ ActiveRecord::Schema.define(version: 20180401083825) do
   end
 
   add_foreign_key "decrees", "individuals", column: "initiator_id"
-  add_foreign_key "departments", "departments", column: "parental_dept_id"
   add_foreign_key "individuals", "departments"
   add_foreign_key "individuals", "users"
   add_foreign_key "pcs", "rooms"

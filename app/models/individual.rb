@@ -4,4 +4,3 @@ class Individual < ApplicationRecord
     has_many :decrees, foreign_key: "initiator_id"
 
 end
-
